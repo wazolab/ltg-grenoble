@@ -6,23 +6,23 @@
   <meta name="description" content="{{ description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.subject }} &mdash; {{ title }}</title>
-  <link rel="preload" href="/assets/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="/assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="/assets/css/helpers.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/typography.css">
-  <link rel="stylesheet" href="/assets/css/header.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="preload" href="{{ site.basePath }}/assets/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="{{ site.basePath }}/assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="{{ site.basePath }}/assets/css/helpers.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{ site.basePath }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.basePath }}/assets/css/typography.css">
+  <link rel="stylesheet" href="{{ site.basePath }}/assets/css/header.css">
+  <link rel="stylesheet" href="{{ site.basePath }}/assets/css/footer.css">
   <noscript>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/theme.css">
-    <link rel="stylesheet" href="/assets/css/helpers.css">
+    <link rel="stylesheet" href="{{ site.basePath }}/assets/css/reset.css">
+    <link rel="stylesheet" href="{{ site.basePath }}/assets/css/theme.css">
+    <link rel="stylesheet" href="{{ site.basePath }}/assets/css/helpers.css">
   </noscript>
 </head>
 
 <body id="top">
   <header>
-    <img src="/assets/images/brand.jpg" alt="Logo du {{ site.subject }}" />
+    <img src="{{ site.basePath }}/assets/images/brand.jpg" alt="Logo du {{ site.subject }}" />
     <nav>
       {{#each collections.nav}}
         <a href="{{ this.path }}">{{ this.title }}</a>
@@ -75,8 +75,8 @@
     </div>
   </footer>
 
-  <script src="/assets/scripts/theme-toggle.js" async defer ></script>
-  <script src="/assets/scripts/page-size.js" async defer ></script>
+  <script src="{{ site.basePath }}/assets/scripts/theme-toggle.js" async defer ></script>
+  <script src="{{ site.basePath }}/assets/scripts/page-size.js" async defer ></script>
 </body>
 
 </html>

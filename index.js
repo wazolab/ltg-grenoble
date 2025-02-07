@@ -12,7 +12,7 @@ const prod = process.env.NODE_ENV === 'production';
 
 const sitedata = {
   site: {
-    base: !prod ? 'http://localhost:3000' : 'https://lowtech-lab-grenoble.fr',
+    basePath: !prod ? '' : '/ltg-grenoble',
     subject: 'Low-tech Lab - Grenoble',
     author: '© Low-tech Lab - Grenoble',
     contact: 'contact@lowtechlabgrenoble.org',

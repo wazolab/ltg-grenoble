@@ -3,7 +3,7 @@ title: Accueil
 nav_order: 0
 ---
 
-![Photo de l'équipe ?](/assets/images/team.jpg)
+![Photo de l'équipe ?]({{site.basePath}}/assets/images/team.jpg)
 
 # Présentation de l'asso
 
