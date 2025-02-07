@@ -25,7 +25,7 @@
     <img src="{{ site.basePath }}/assets/images/brand.jpg" alt="Logo du {{ site.subject }}" />
     <nav>
       {{#each collections.nav}}
-        <a href="{{ this.path }}">{{ this.title }}</a>
+        <a href="{{ basePath }}/{{ path }}">{{ title }}</a>
       {{/each}}
     </nav>
     <button id="theme-toggle" class="theme-toggle">🌙</button>
@@ -75,8 +75,8 @@
     </div>
   </footer>
 
-  <script src="{{ site.basePath }}/assets/scripts/theme-toggle.js" async defer ></script>
-  <script src="{{ site.basePath }}/assets/scripts/page-size.js" async defer ></script>
+  <script async src="{{ site.basePath }}/assets/scripts/theme-toggle.js" ></script>
+  <script src="{{ site.basePath }}/assets/scripts/page-size.js" ></script>
 </body>
 
 </html>

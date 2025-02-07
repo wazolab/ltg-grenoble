@@ -5,6 +5,7 @@ import layouts from '@metalsmith/layouts'
 import markdown from '@metalsmith/markdown'
 import permalinks from '@metalsmith/permalinks'
 import collections from '@metalsmith/collections'
+import inPlace from '@metalsmith/in-place'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const t1 = performance.now()
@@ -36,14 +37,26 @@ Metalsmith(__dirname)
     TZ: 'Europe/Paris',
   })
   .metadata(sitedata)
+  .use(inPlace({
+    pattern: '**/*.md',
+    transform: 'handlebars'
+  }))
   .use(markdown())
+  .use(permalinks())
   .use(collections({
     nav: {
       pattern: '**/*.html',
-      sortBy: 'nav_order'
+      sortBy: 'nav_order',
+      metadata: {
+        base: sitedata.site.basePath
+      }
     }
   }))
-  .use(permalinks())
+  .use(function addBasePathToCollection(files) {
+    Object.values(files).forEach(file => {
+      file.basePath = sitedata.site.basePath;
+    });
+  })
   .use(layouts({
     directory: 'layouts',
     default: 'default.hbs',
