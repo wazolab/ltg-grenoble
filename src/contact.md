@@ -1,5 +1,6 @@
 ---
 title: Contact
+nav_order: 2
 ---
 
 Vous souhaitez rentrer en contact avec nous ? Ecrivez-nous !

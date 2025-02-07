@@ -4,6 +4,7 @@ import Metalsmith from 'metalsmith'
 import layouts from '@metalsmith/layouts'
 import markdown from '@metalsmith/markdown'
 import permalinks from '@metalsmith/permalinks'
+import collections from '@metalsmith/collections'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const t1 = performance.now()
@@ -17,14 +18,6 @@ const sitedata = {
     contact: 'contact@lowtechlabgrenoble.org',
     address: '48 Ave. Washington, 38100 Grenoble'
   },
-  nav: [
-    { path: 'index.html', label: 'Accueil' },
-    { path: 'actions.html', label: 'Actions' },
-    { path: 'contact.html', label: 'Contact' },
-    { path: 'faq.html', label: 'FAQ' },
-    { path: 'ressources.html', label: 'Ressources' },
-    { path: 'blog.html', label: 'Blog' }
-  ],
   socials: {
     twitter: 'https://twitter.com/johndoe',
     facebook: 'https://facebook.com/johndoe',
@@ -44,6 +37,12 @@ Metalsmith(__dirname)
   })
   .metadata(sitedata)
   .use(markdown())
+  .use(collections({
+    nav: {
+      pattern: '**/*.html',
+      sortBy: 'nav_order'
+    }
+  }))
   .use(permalinks())
   .use(layouts({
     directory: 'layouts',

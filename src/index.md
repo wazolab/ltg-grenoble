@@ -1,5 +1,6 @@
 ---
 title: Accueil
+nav_order: 0
 ---
 
 ![Photo de l'équipe ?](/assets/images/team.jpg)

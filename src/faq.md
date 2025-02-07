@@ -1,5 +1,6 @@
 ---
 title: FAQ
+nav_order: 4
 ---
 
 Pas sûr qu’on en ait besoin, mais peut servir à éclarcir qqs questions récurrentes comme :

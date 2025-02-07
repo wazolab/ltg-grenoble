@@ -1,5 +1,6 @@
 ---
 title: Ressources
+nav_order: 3
 ---
 
 # Présentation des LT disponibles en prêt à prix libre & de la procédure (Si pas dans “Actions de l’asso”)
