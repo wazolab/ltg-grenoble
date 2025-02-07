@@ -1,0 +1,34 @@
+header {
+  display: grid;
+  grid-template-columns: minmax(auto, 140px) 1fr auto;
+  place-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #fff, var( --primary-color));
+  box-shadow: 0 4px 6px color-mix(in srgb, var(--border-color) 40%, transparent);
+}
+
+/* Dark Mode */
+[data-theme="dark"] header {
+  background: linear-gradient(135deg, var(--background-dark), var(--secondary-color)); 
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color:  var(--text-color);
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}

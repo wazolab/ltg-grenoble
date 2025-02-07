@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{{ description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.subject }} &mdash; {{ title }}</title>
+  <link rel="preload" href="/assets/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <noscript>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+  </noscript>
+</head>
+
+<body id="top">
+  <header>
+    <img src="/assets/images/brand.jpg" alt="Logo du {{ site.subject }}" />
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/actions">Actions</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQ</a>
+      <a href="/ressources">Ressources</a>
+      <a href="/blog">Blog</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </header>
+  <main>
+    <h1>{{ title }}</h1>
+    {{{ contents }}}
+    {{!-- {{#if postlist}}
+    <ul>
+      {{#each posts}}
+      <li>
+        <a href="/{{ path }}">{{ title }}</a>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}} --}}
+  </main>
+
+  <footer>
+    <div>
+        <div>
+          <h3>Hébergement</h3>
+          <p>Ce site est hébergé par <a href="https://www.gresille.org/" target="_blank">Grésille</a></p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <address>{{ site.address }}</address>
+          <a href="mailto:{{ site.contact }}">{{ site.contact }}</a>
+        </div>
+        <div>
+          <h3>Adhésion</h3>
+          <a href="https://www.helloasso.com/associations/low-tech-lab-grenoble/adhesions/formulaire-d-adhesion-2025-low-tech-lab-grenoble" target="_blank">Formulaire d'adhésion</a>
+        </div>
+    </div>
+    <div>
+      <span id="page-size"></span>
+      <span>{{ site.author }} | Generated with <a href="https://metalsmith.io/" target="_blank" title="Metalsmith - static site generator">Metalsmith.io</a></span>
+      <nav id="back-to-top">
+        <a
+          href="#top"
+          title="Retour en haut"
+          aria-label="Retour en haut de page"
+        >
+          ↑
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/scripts/theme-toggle.js" async defer ></script>
+  <script src="/assets/scripts/page-size.js" async defer ></script>
+</body>
+
+</html>

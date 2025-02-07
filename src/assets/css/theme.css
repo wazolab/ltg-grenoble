@@ -1,0 +1,38 @@
+/* Light Mode (default) */
+:root {
+  --primary-color: #B68E00;
+  --secondary-color: #6B1E1E;
+  --text-color: #1E3C3C;
+  --text-muted: #8A8A8A;
+  --hover-color: #B68E00;
+  --link-color: #6B1E1E;
+  --background-light: #F5F5F5;
+  --background-dark: #2C3E50;
+  --border-color: #B68E00;
+  --footer-background: #FFF;
+  --body-background: #FFF;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --primary-color: #B68E00;
+  --secondary-color: #6B1E1E;
+  --text-color: #E0E0E0;
+  --text-muted: #A0A0A0;
+  --hover-color: #E5B900;
+  --link-color: #F3D9A1;
+  --background-light: #2C3E3E;
+  --background-dark: #1E2A2A;
+  --border-color: #B68E00;
+  --footer-background: #1E3C3C;
+  --body-background: #182828;
+}
+
+.theme-toggle {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
+}

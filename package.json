@@ -1,0 +1,20 @@
+{
+  "name": "ltg-grenoble",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "node index.js",
+    "start": "serve build"
+  },
+  "dependencies": {
+    "@metalsmith/layouts": "^2.7.0",
+    "@metalsmith/markdown": "^1.10.0",
+    "@metalsmith/permalinks": "^3.2.0",
+    "jstransformer-handlebars": "^1.2.0",
+    "metalsmith": "^2.6.3"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "packageManager": "yarn@2.4.1+sha512.718af6769585d530db979f95ed3c8b0008759cee56eaf174fc6344dad2d041780aec8cf86a52d3829085d3b9bbbbbb1de7d806ad94637defbb5064aa864ea053"
+}
